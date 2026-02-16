@@ -1,0 +1,95 @@
+.container {
+  background: #f8fafc;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  overflow: hidden;
+}
+
+.toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: none;
+  border: none;
+  font-family: var(--font-retro), monospace;
+  font-size: 8px;
+  text-transform: uppercase;
+  color: #374151;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.arrow {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.content {
+  padding: 0 14px 14px;
+}
+
+.description {
+  margin: 0 0 12px 0;
+  font-family: var(--font-retro), monospace;
+  font-size: 7px;
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+.table {
+  border: 2px solid #000;
+  background: #fff;
+}
+
+.headerRow {
+  display: flex;
+  background: #1f2937;
+  padding: 8px 10px;
+}
+
+.headerCell {
+  flex: 1;
+  font-family: var(--font-retro), monospace;
+  font-size: 7px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  padding: 6px 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row.topThree {
+  background: #fef3c7;
+}
+
+.rankCell {
+  flex: 1;
+  font-family: var(--font-retro), monospace;
+  font-size: 7px;
+  color: #1f2937;
+}
+
+.percentCell {
+  flex: 1;
+  font-family: var(--font-retro), monospace;
+  font-size: 7px;
+  color: #059669;
+  font-weight: bold;
+}
+
+.note {
+  margin: 10px 0 0 0;
+  font-family: var(--font-retro), monospace;
+  font-size: 6px;
+  color: #6b7280;
+  line-height: 1.6;
+}

@@ -1,0 +1,184 @@
+.container {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--bg-base, #f1f5f9);
+}
+
+.card {
+  background: var(--card-bg, #fff);
+  border: 4px solid #000;
+  border-radius: 12px;
+  padding: 32px 24px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 6px 6px 0 #000;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: 3px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.title {
+  font-family: var(--font-retro), monospace;
+  font-size: 18px;
+  color: #10b981;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.description {
+  font-family: var(--font-retro), monospace;
+  font-size: 10px;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.structure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+}
+
+.structureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.roundNum {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-retro), monospace;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.roundLabel {
+  font-family: var(--font-retro), monospace;
+  font-size: 8px;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.arrow {
+  font-size: 16px;
+  color: #94a3b8;
+}
+
+.note {
+  font-family: var(--font-retro), monospace;
+  font-size: 9px;
+  color: #64748b;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #fef3c7;
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+
+.prizeInfo {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  color: white;
+}
+
+.prizeTitle {
+  font-family: var(--font-retro), monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.prizeAmount {
+  font-family: var(--font-retro), monospace;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.winnersCount {
+  font-family: var(--font-retro), monospace;
+  font-size: 10px;
+  opacity: 0.9;
+}
+
+.oneChance {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #fef3c7;
+  border: 2px solid #000;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.oneChance p {
+  font-family: var(--font-retro), monospace;
+  font-size: 10px;
+  color: #92400e;
+  margin: 0;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.warning {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.backLink {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-family: var(--font-retro), monospace;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+.backLink:hover {
+  color: #475569;
+}

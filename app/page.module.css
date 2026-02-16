@@ -1,0 +1,706 @@
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  position: relative;
+  padding: 20px 4px 140px 4px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.trophyContainer {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 16px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trophyIcon {
+  width: 72px;
+  height: 72px;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.appTitle {
+  font-family: var(--font-retro), monospace;
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #2563EB;
+  text-shadow: 3px 3px 0 #1d4ed8;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-family: var(--font-retro), monospace;
+  font-size: 8px;
+  color: #64748b;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.prizeHighlight {
+  display: inline-block;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fef3c7 100%);
+  border: 4px solid #000;
+  padding: 14px 24px;
+  margin-top: 20px;
+  font-family: var(--font-retro), monospace;
+  font-size: 10px;
+  color: #78350f;
+  box-shadow: 4px 4px 0 #000, 0 0 20px rgba(251, 191, 36, 0.4);
+  position: relative;
+  animation: prizeGlow 2s ease-in-out infinite alternate;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.prizeHighlight::before {
+  content: '★';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #f59e0b;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.prizeHighlight::after {
+  content: '★';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #f59e0b;
+  text-shadow: 1px 1px 0 #000;
+}
+
+@keyframes prizeGlow {
+  0% {
+    box-shadow: 4px 4px 0 #000, 0 0 15px rgba(251, 191, 36, 0.3);
+  }
+  100% {
+    box-shadow: 4px 4px 0 #000, 0 0 25px rgba(251, 191, 36, 0.6);
+  }
+}
+
+.prizeAmount {
+  font-size: 16px;
+  font-weight: bold;
+  color: #b45309;
+  text-shadow: 1px 1px 0 #fef3c7;
+  display: inline-block;
+  animation: prizeShine 3s ease-in-out infinite;
+}
+
+@keyframes prizeShine {
+  0%, 100% {
+    color: #b45309;
+  }
+  50% {
+    color: #d97706;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hint {
+  margin-top: var(--space-sm);
+}
+
+.error {
+  color: #DC2626;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: var(--space-sm);
+  background-color: #FEE2E2;
+  border-radius: var(--radius-sm);
+}
+
+.retryButton {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #f59e0b;
+  color: white;
+  border: 2px solid #000;
+  border-radius: 6px;
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.retryButton:hover:not(:disabled) {
+  background-color: #d97706;
+}
+
+.retryButton:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.success {
+  color: #10b981;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: var(--space-sm);
+  background-color: #d1fae5;
+  border-radius: var(--radius-sm);
+}
+
+.worldAppRequired {
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.worldAppRequired h2 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.worldAppRequired p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.instructions {
+  text-align: left;
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.sessionInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value {
+  font-weight: 500;
+  font-family: monospace;
+}
+
+.entryFeeNote {
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+  margin: 8px 0 0 0;
+  font-family: var(--font-retro), monospace;
+}
+
+.entryFee {
+  color: var(--color-brand);
+  font-size: 18px;
+}
+
+.credits {
+  color: #10b981;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.noCredits {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 14px;
+  margin: 0;
+  padding: var(--space);
+}
+
+.entryNote {
+  text-align: center;
+  font-size: 10px;
+  color: #10b981;
+  margin: 4px 0 0 0;
+  font-family: var(--font-retro), monospace;
+}
+
+.tries {
+  color: #10b981;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.eventEnded {
+  text-align: center;
+  color: #DC2626;
+  font-size: 14px;
+  margin: 0;
+  padding: var(--space);
+  background-color: #FEE2E2;
+  border-radius: var(--radius-sm);
+}
+
+.gameActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+  width: 100%;
+}
+
+/* Pricing Banner - Always visible */
+.pricingBanner {
+  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+  border: 3px solid #000;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 8px;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.pricingTitle {
+  font-family: var(--font-retro), monospace;
+  font-size: 10px;
+  color: #1e40af;
+  text-align: center;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pricingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #94a3b8;
+}
+
+.pricingRow:last-of-type {
+  border-bottom: none;
+}
+
+.pricingLabel {
+  font-family: var(--font-retro), monospace;
+  font-size: 9px;
+  color: #475569;
+}
+
+.pricingValue {
+  font-family: var(--font-retro), monospace;
+  font-size: 12px;
+  color: #1e40af;
+  font-weight: bold;
+}
+
+.pricingNote {
+  font-family: var(--font-retro), monospace;
+  font-size: 8px;
+  color: #64748b;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Payment Confirmation Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: var(--card-bg, #fff);
+  border: 4px solid #000;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 6px 6px 0 #000;
+}
+
+.modalTitle {
+  font-family: var(--font-retro), monospace;
+  font-size: 14px;
+  color: #1e40af;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.modalContent {
+  margin-bottom: 24px;
+}
+
+.paymentDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-family: var(--font-retro), monospace;
+  font-size: 10px;
+}
+
+.paymentAmount {
+  font-size: 18px;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.discountBadge {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin: 8px 0;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.paymentWarning {
+  font-family: var(--font-retro), monospace;
+  font-size: 10px;
+  color: #b45309;
+  text-align: center;
+  margin-top: 16px;
+  padding: 12px;
+  background: #fef3c7;
+  border: 2px solid #f59e0b;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.paymentNote {
+  font-family: var(--font-retro), monospace;
+  font-size: 9px;
+  color: #64748b;
+  text-align: center;
+  margin-top: 12px;
+  padding: 12px;
+  background: #f1f5f9;
+  border-radius: 6px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+}
+
+.modalActions button {
+  flex: 1;
+}
+
+/* Voucher Button */
+.voucherBtn {
+  font-family: var(--font-retro), monospace;
+  font-size: 10px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #92400e;
+  border: 3px solid #f59e0b;
+  padding: 10px 16px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #000;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+  width: 100%;
+  transition: all 0.1s;
+}
+
+.voucherBtn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+.voucherBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+.appliedVoucher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  border: 2px solid #22c55e;
+  padding: 8px 12px;
+  font-family: var(--font-retro), monospace;
+}
+
+.appliedVoucherText {
+  font-size: 9px;
+  color: #166534;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.removeVoucherBtn {
+  font-family: var(--font-retro), monospace;
+  font-size: 8px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+/* Voucher Picker */
+.voucherList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 4px;
+}
+
+.voucherItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.1s;
+  width: 100%;
+}
+
+.voucherItem:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.voucherIcon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voucherInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.voucherName {
+  font-family: var(--font-retro), monospace;
+  font-size: 11px;
+  color: #1e293b;
+  font-weight: bold;
+}
+
+.voucherDesc {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.voucherUse {
+  font-family: var(--font-retro), monospace;
+  font-size: 9px;
+  color: #3b82f6;
+  font-weight: bold;
+  padding: 4px 10px;
+  border: 2px solid #3b82f6;
+  flex-shrink: 0;
+}
+
+/* Free Play Confirm */
+.freePlayConfirm {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.freePlayText {
+  font-family: var(--font-retro), monospace;
+  font-size: 12px;
+  color: #22c55e;
+  margin: 12px 0 0;
+  font-weight: bold;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 6px;
+  font-size: 10px;
+}
+
+/* Update Banner */
+.updateOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 24px;
+  animation: overlayFadeIn 0.3s ease-out;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideIn {
+  from { opacity: 0; transform: scale(0.9) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.updateOverlayModal {
+  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border: 4px solid #e94560;
+  border-radius: 16px;
+  padding: 32px 24px;
+  max-width: 340px;
+  width: 100%;
+  box-shadow: 0 0 40px rgba(233, 69, 96, 0.4), 8px 8px 0 rgba(0, 0, 0, 0.5);
+  animation: modalSlideIn 0.4s ease-out 0.1s both;
+  text-align: center;
+}
+
+.updateOverlayHeader {
+  margin-bottom: 20px;
+}
+
+.updateOverlayTitle {
+  font-family: var(--font-retro), monospace;
+  font-size: 22px;
+  color: #e94560;
+  margin: 0;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5), 0 0 20px rgba(233, 69, 96, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.updateOverlayBody {
+  margin-bottom: 24px;
+}
+
+.updateOverlayText {
+  font-family: var(--font-retro), monospace;
+  font-size: 11px;
+  color: #e0e0e0;
+  line-height: 1.8;
+  margin: 0 0 12px 0;
+}
+
+.updateOverlayText strong {
+  color: #ffd700;
+}
+
+.updateOverlayButton {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #e94560 0%, #c23152 100%);
+  border: 3px solid #ff6b81;
+  border-radius: 10px;
+  color: white;
+  font-family: var(--font-retro), monospace;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4), 0 0 15px rgba(233, 69, 96, 0.3);
+  transition: transform 0.1s, box-shadow 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.updateOverlayButton:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Pending Payment Notice */
+.pendingPaymentNotice {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fef3c7 100%);
+  border: 3px solid #d97706;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px 0;
+  text-align: center;
+  animation: pendingPulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pendingPulse {
+  0% { box-shadow: 0 0 8px rgba(217, 119, 6, 0.3); }
+  100% { box-shadow: 0 0 16px rgba(217, 119, 6, 0.6); }
+}
+
+.pendingPaymentText {
+  font-family: var(--font-retro), monospace;
+  font-size: 10px;
+  color: #92400e;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.retryButton {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border: 3px solid #92400e;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+  font-family: var(--font-retro), monospace;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #78350f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.retryButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.retryButton:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #78350f;
+}

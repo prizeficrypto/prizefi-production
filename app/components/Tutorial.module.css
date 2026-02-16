@@ -1,0 +1,82 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: var(--spacing);
+}
+
+.modal {
+  background: var(--background);
+  border-radius: 20px;
+  padding: calc(var(--spacing) * 2);
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.progress {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 24px;
+  border-radius: 4px;
+  background: var(--primary);
+}
+
+.dot.completed {
+  background: var(--success);
+}
+
+.content {
+  text-align: center;
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+.emoji {
+  font-size: 64px;
+  margin-bottom: var(--spacing);
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: var(--spacing);
+  color: var(--text);
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.buttons {
+  display: flex;
+  gap: var(--spacing);
+}
+
+.buttons button {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+}

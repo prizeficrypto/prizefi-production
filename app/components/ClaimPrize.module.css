@@ -1,0 +1,97 @@
+.container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: calc(var(--spacing) * 1.5);
+  border-radius: 12px;
+  margin-top: var(--spacing);
+}
+
+.prizeInfo {
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+
+.label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.claimButton {
+  width: 100%;
+  margin-top: var(--spacing);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+}
+
+.success {
+  text-align: center;
+  padding: 12px;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  border-radius: 8px;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.error {
+  text-align: center;
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  border-radius: 8px;
+  color: #ef4444;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.payoutInfo {
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.payoutNote {
+  margin-bottom: 8px;
+}
+
+.discordButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #5865F2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.discordButton:hover {
+  background: #4752C4;
+}
+
+.discordIcon {
+  width: 18px;
+  height: 18px;
+}

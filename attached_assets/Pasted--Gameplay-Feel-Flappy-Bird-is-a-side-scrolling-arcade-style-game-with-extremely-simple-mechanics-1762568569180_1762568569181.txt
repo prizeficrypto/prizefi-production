@@ -1,0 +1,90 @@
+🕹️ Gameplay Feel
+
+Flappy Bird is a side-scrolling arcade-style game with extremely simple mechanics but surprisingly deep difficulty.
+
+Bird movement: The bird automatically falls downward due to gravity, and the only control is tapping the screen (or pressing a key) to make the bird "flap" its wings. Each flap gives a small, quick upward thrust—more of a “hop” than a sustained lift.
+
+Gravity: Gravity is quite strong. If you don’t flap for more than a second or two, the bird plummets rapidly. The descent feels heavier than most platformers, giving a sense of urgency and precision.
+
+Flap strength: Each flap adds a short, snappy upward impulse—roughly enough to lift the bird one-third of the gap between pipes. You can’t hold the flap; timing multiple taps is crucial for control. The bird doesn’t glide—it’s constantly sinking, so maintaining level altitude takes rhythmic, deliberate flapping.
+
+Overall, the feel is bouncy but unforgiving—like trying to keep a small ball afloat in gusty wind.
+
+🚧 Pipe Behavior
+
+The pipes are the main obstacles.
+
+Speed: They scroll from right to left at a constant speed—slow enough to react to, but fast enough that a single hesitation causes failure. It’s roughly equivalent to a brisk walking pace (about 2–3 pixels per frame on mobile).
+
+Gap size: The vertical gap between the upper and lower pipe is just wide enough for the bird to squeeze through if timed perfectly. On average, the gap is about 1.5 times the bird’s height, leaving almost no margin for error.
+
+Spawn rate: A new pair of pipes appears every couple of seconds (typically every 1.5–2 seconds), spaced evenly along the horizontal scroll. The vertical position of the gap varies randomly, forcing quick adaptation.
+
+This steady rhythm gives the game its pulse—steady enough to build flow, yet punishing if concentration slips.
+
+💀 Difficulty
+
+Flappy Bird is notoriously hard.
+
+Getting past even five pipes feels like an achievement, and scores above 20 are rare for casual players.
+
+The difficulty arises from tight controls and heavy gravity—the slightest mistimed flap results in collision or a nose dive.
+
+The lack of gradual progression or power-ups makes it purely skill-based.
+
+In short:
+
+Early game: Easy to learn (one tap).
+
+Mid game: Hard to master.
+
+Overall: High difficulty, but incredibly addictive due to short restarts and immediate feedback.
+
+🎨 Visuals
+
+Flappy Bird’s graphics are retro pixel art, simple yet iconic.
+
+Background: A pastel-blue sky with repeating green hills and clouds.
+
+Pipes: Bright green with a shiny highlight—reminiscent of Mario’s warp pipes.
+
+Ground: A patterned, orange-and-yellow strip of dirt with grass on top, scrolling continuously.
+
+Bird: A small, round, pixelated bird with flapping wings. It comes in different colors (yellow, red, blue), with big eyes and a cartoonish expression.
+
+Style: Everything has a crisp, 8-bit charm. The design is clean, uncluttered, and instantly readable.
+
+🔊 Special Features
+
+Sound effects:
+
+A “flap” sound with each tap.
+
+A “point” chime when passing a pipe.
+
+A “hit” thud when colliding.
+
+A “die” sound when falling off-screen.
+The audio feedback is simple but perfectly timed, adding satisfaction (or tension) to each action.
+
+Animations:
+
+The bird flaps its wings in a two-frame loop while moving.
+
+The pipes scroll smoothly, and the ground repeats endlessly.
+
+Upon collision, the bird rotates downward and falls dramatically.
+
+Particles:
+Minimal—just a slight dust puff or flash when hitting the ground. The simplicity keeps focus on the gameplay loop.
+
+🧩 Summary Table
+Element	Description
+Gravity	Strong; pulls bird down fast
+Flap Strength	Short, sharp upward impulse
+Pipe Speed	Moderate; constant scroll
+Pipe Gap	Small; ~1.5× bird height
+Difficulty	Very hard; precision-timing required
+Visuals	Pixel art, retro, colorful
+Sound	Simple, distinct cues for flap/score/death
+Special Effects	Minimal animations, fast restart loop

@@ -1,0 +1,287 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.modal {
+  background: #1a1a2e;
+  border: 4px solid #fbbf24;
+  box-shadow: 0 0 40px rgba(251, 191, 36, 0.3), 8px 8px 0 #000;
+  max-width: 340px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 4px solid #000;
+}
+
+.title {
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  color: #000;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.boostedTag {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  background: #7c3aed;
+  color: white;
+  padding: 3px 8px;
+  border: 2px solid #000;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.reelArea {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(180deg, #16213e 0%, #0f3460 100%);
+}
+
+.reelFrame {
+  width: 100%;
+  position: relative;
+  border: 4px solid #fbbf24;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(251, 191, 36, 0.2);
+  background: #0a0a1a;
+}
+
+.pointer {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fbbf24;
+  z-index: 10;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.pointerBottom {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fbbf24;
+  z-index: 10;
+  filter: drop-shadow(0 -2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.reelWindow {
+  overflow: hidden;
+  height: 64px;
+  position: relative;
+}
+
+.reelWindow::before,
+.reelWindow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.reelWindow::before {
+  left: 0;
+  background: linear-gradient(90deg, #0a0a1a 0%, transparent 100%);
+}
+
+.reelWindow::after {
+  right: 0;
+  background: linear-gradient(270deg, #0a0a1a 0%, transparent 100%);
+}
+
+.reelStrip {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+}
+
+.reelItem {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-right: 3px solid rgba(0, 0, 0, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reelLabel {
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  color: white;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.spinBtn {
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%);
+  color: #000;
+  border: 3px solid #000;
+  padding: 14px 48px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #000;
+  transition: all 0.1s;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.spinBtn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 3px 3px 0 #000;
+}
+
+.spinBtn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+.oddsSection {
+  padding: 16px;
+  background: #111827;
+  border-top: 3px solid #1f2937;
+}
+
+.oddsTitle {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.oddsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.oddsItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #1f2937;
+  padding: 6px 10px;
+  border: 1px solid #374151;
+}
+
+.oddsDot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+}
+
+.oddsLabel {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  color: #e5e7eb;
+}
+
+.oddsChance {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  color: #fbbf24;
+  font-weight: bold;
+}
+
+.result {
+  padding: 28px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #16213e 0%, #1a1a2e 100%);
+  border-top: 3px solid #fbbf24;
+}
+
+.resultStars {
+  font-family: var(--font-pixel);
+  font-size: 24px;
+  color: #fbbf24;
+  margin-bottom: 12px;
+  letter-spacing: 8px;
+  animation: twinkle 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.6; text-shadow: 0 0 8px rgba(251, 191, 36, 0.3); }
+  to { opacity: 1; text-shadow: 0 0 16px rgba(251, 191, 36, 0.8); }
+}
+
+.resultTitle {
+  font-family: var(--font-pixel);
+  font-size: 22px;
+  color: #fbbf24;
+  margin: 0 0 8px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.resultText {
+  font-size: 13px;
+  color: #d1d5db;
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+
+.closeBtn {
+  font-family: var(--font-pixel);
+  font-size: 14px;
+  background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+  color: white;
+  border: 3px solid #000;
+  padding: 14px 40px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #000;
+  transition: all 0.1s;
+  letter-spacing: 1px;
+}
+
+.closeBtn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 3px 3px 0 #000;
+}
+
+.closeBtn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 #000;
+}

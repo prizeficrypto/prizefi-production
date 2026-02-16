@@ -1,0 +1,34 @@
+DEPLOYMENT CACHE ISSUE - EVIDENCE FOR REPLIT SUPPORT
+====================================================
+
+ISSUE: Deployment keeps failing with error about hardhat@3.0.10, 
+but that version does NOT exist in the current package.json file.
+
+CURRENT PACKAGE.JSON (VERIFIED CORRECT):
+----------------------------------------
+"hardhat": "^2.22.15"
+"@nomicfoundation/hardhat-toolbox": "^5.0.0"
+"@nomicfoundation/hardhat-ethers": "^3.0.8"
+
+File checksum: edb2c25f50ed9b9907d89a15a5560e22
+
+DEPLOYMENT ERROR (REPORTING WRONG VERSIONS):
+-------------------------------------------
+Error claims:
+- hardhat@3.0.10 (DOES NOT EXIST IN FILE)
+- @nomicfoundation/hardhat-toolbox@6.1.0 (DOES NOT EXIST IN FILE)
+
+VERIFIED INSTALLATION:
+---------------------
+Local npm list shows:
+├── @nomicfoundation/hardhat-ethers@3.1.2
+├── @nomicfoundation/hardhat-toolbox@5.0.0
+└── hardhat@2.26.5
+
+Production build: ✓ Compiled successfully in 17.1s
+
+CONCLUSION:
+----------
+The deployment system is reading cached/stale package.json data.
+The actual file has been fixed and builds successfully locally.
+Need Replit to clear deployment cache or read fresh file content.

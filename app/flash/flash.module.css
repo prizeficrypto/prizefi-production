@@ -1,0 +1,350 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-retro), monospace;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px 100px;
+  gap: 16px;
+}
+
+.flashHeader {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.flashBadge {
+  display: inline-block;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 4px;
+  color: #b45309;
+  text-shadow: 2px 2px 0 #fbbf24;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.errorBanner {
+  width: 100%;
+  max-width: 400px;
+  background: #fef2f2;
+  border: 2px solid #ef4444;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #dc2626;
+  font-size: 12px;
+}
+
+.dismissError {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(245, 158, 11, 0.3);
+  border-top-color: #f59e0b;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.noEvent {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.noEventIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.noEvent h2 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #b45309;
+}
+
+.noEvent p {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin: 0 0 24px;
+}
+
+.eventCard {
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 3px solid #000;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.eventRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.eventRow:last-child {
+  border-bottom: none;
+}
+
+.eventLabel {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.eventValue {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b45309;
+}
+
+.actionSection {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--color-gray-100);
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.creditCount {
+  font-size: 16px;
+  font-weight: bold;
+  color: #b45309;
+}
+
+.usedNotice {
+  text-align: center;
+  padding: 16px;
+  background: var(--color-gray-100);
+  border-radius: 8px;
+}
+
+.usedNotice p {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin: 0 0 12px;
+}
+
+.primaryButton {
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 8px;
+  font-family: var(--font-retro), monospace;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.primaryButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0 #000;
+}
+
+.primaryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  padding: 10px 20px;
+  background: transparent;
+  color: #b45309;
+  border: 2px solid #b45309;
+  border-radius: 8px;
+  font-family: var(--font-retro), monospace;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.secondaryButton:hover {
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.leaderboardLink {
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--color-muted);
+  border: 2px solid var(--color-gray-300);
+  border-radius: 8px;
+  font-family: var(--font-retro), monospace;
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.leaderboardLink:hover {
+  color: #b45309;
+  border-color: #b45309;
+}
+
+.backButton, .backLink {
+  padding: 12px 24px;
+  background: transparent;
+  color: var(--color-muted);
+  border: none;
+  font-family: var(--font-retro), monospace;
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.backLink:hover, .backButton:hover {
+  color: var(--color-text);
+}
+
+.resultScreen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 24px;
+}
+
+.resultTitle {
+  font-size: 28px;
+  font-weight: bold;
+  color: #b45309;
+  text-shadow: 2px 2px 0 #fbbf24;
+  margin: 0;
+}
+
+.scoreDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 48px;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 3px solid #000;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.scoreLabel {
+  font-size: 12px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.scoreValue {
+  font-size: 48px;
+  font-weight: bold;
+  color: #b45309;
+}
+
+.leaderboardList {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.leaderboardEntry {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--color-gray-100);
+  border-radius: 8px;
+  border: 2px solid var(--color-gray-200);
+}
+
+.leaderboardEntry.currentUser {
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border-color: #f59e0b;
+}
+
+.rank {
+  width: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #b45309;
+}
+
+.playerName {
+  flex: 1;
+  font-size: 12px;
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.score {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b45309;
+}

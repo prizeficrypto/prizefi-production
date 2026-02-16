@@ -1,0 +1,142 @@
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border: 3px solid #000;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(180, 83, 9, 0.3);
+  border-top-color: #b45309;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.flashBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #000;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 8px;
+  letter-spacing: 1px;
+}
+
+.flashIcon {
+  font-size: 12px;
+}
+
+.timeLeft {
+  font-size: 11px;
+  font-weight: bold;
+  color: #b45309;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.prizeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.prizeLabel {
+  font-size: 9px;
+  color: #92400e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prizeValue {
+  font-size: 18px;
+  font-weight: bold;
+  color: #78350f;
+}
+
+.statusInfo {
+  text-align: right;
+}
+
+.playedBadge {
+  font-size: 10px;
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.readyBadge {
+  font-size: 10px;
+  color: #2563eb;
+  background: #dbeafe;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.entryFee {
+  font-size: 11px;
+  color: #b45309;
+  font-weight: bold;
+}
+
+.playButton {
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-family: var(--font-retro), monospace;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.playButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 #000;
+}

@@ -1,0 +1,138 @@
+1. Gambling Adjacency Signals (Even if It Is Not Gambling)
+
+Your app is skill based, but reviewers still look for gambling-like signals.
+
+Look out for and remove or soften:
+
+• Jackpot language
+• “Win big”
+• Flashing reward animations
+• Slot-machine style sounds
+• Randomized payout messaging
+• Celebration screens that feel casino-like
+
+What to do instead:
+• Emphasize ranking and placement
+• Emphasize score and performance
+• Use tournament language, not betting language
+• Present rewards as prize distribution, not winnings
+
+2. Prize Pool Transparency
+
+Reviewers are sensitive to unclear prize logic.
+
+Look out for:
+• Prize pools that are not explained clearly
+• Ambiguous payout calculations
+• Hidden fee mechanics
+• Unclear how many winners exist
+
+Best practice:
+• Clearly state prize pool size
+• Clearly state number of rewarded ranks
+• Clearly explain how rewards are split
+• Avoid dynamic or opaque calculations
+
+Even if the math is fair, opacity can trigger concern.
+
+3. Progression and Grinding Mechanics
+
+Be careful that progression does not feel like:
+
+• Pay more to improve odds
+• Pay repeatedly to climb rankings quickly
+• Endless paid loops
+
+Things to check:
+• Are users encouraged to rejoin immediately after finishing?
+• Is there urgency pressure to keep paying?
+• Are there streaks or bonuses tied to repeated paid entry?
+
+Safer approach:
+• Clear tournament windows
+• Natural stopping points
+• Emphasis on skill improvement through practice, not payment
+
+4. Dark Pattern Avoidance
+
+World App reviewers look for consumer protection issues.
+
+Check for:
+• Confusing button placement
+• Accidental taps that cause payment
+• Auto-starting paid flows
+• Payment confirmation screens that are too subtle
+
+Best practice:
+• Clear confirmation before charging WLD
+• Explicit cost displayed before join
+• No surprise charges
+
+5. Minor Protection and Abuse Signals
+
+Even though World App handles verification, your app still needs guardrails.
+
+Check for:
+• Bot-like behavior patterns
+• Very fast repeated joins
+• Suspicious session abandon loops
+
+You do not need to solve fraud, but showing awareness helps.
+
+6. Accessibility and Clarity
+
+Accessibility issues rarely cause rejection alone, but they stack.
+
+Look out for:
+• Color-only instructions
+• Small text in critical screens
+• Fast transitions without explanation
+
+Especially for a reaction game:
+• Give a clear start signal
+• Ensure consistent timing
+• Avoid confusing transitions
+
+7. Submission Description Consistency
+
+Make sure:
+• Your submission description exactly matches the app behavior
+• You do not over-promise or oversimplify
+• You explicitly state “no paid retries”
+
+Inconsistency between description and behavior is a quiet rejection reason.
+
+8. Emotional Framing
+
+This one is subtle.
+
+Avoid framing like:
+• “Don’t miss out”
+• “Last chance”
+• “Only the best win money”
+
+Prefer:
+• “Top performers are rewarded”
+• “Ranking is based on final match score”
+
+The emotional tone matters more than most people expect.
+
+9. Reviewer Mental Model Test (Use This)
+
+Before resubmitting, ask one simple question:
+
+Could a reviewer explain my app in one sentence without using the words chance, retry, or bet?
+
+If yes, you are safe.
+If no, fix the framing.
+
+10. Document Everything Once
+
+One last practical tip.
+
+Include a short “How competition works” screen inside the app.
+
+Not for users. For reviewers.
+
+Reviewers do open rules screens sometimes.
+Make it boring, factual, and clear.

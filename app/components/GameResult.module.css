@@ -1,0 +1,250 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--spacing);
+}
+
+.card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing) * 2);
+  max-width: var(--max-width);
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.scoreDisplay {
+  margin: 16px 0 24px 0;
+}
+
+.scoreLabel {
+  font-size: 15px;
+  color: var(--color-muted);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.scoreValue {
+  font-size: 64px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2563EB 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  margin: 4px 0;
+  letter-spacing: -2px;
+}
+
+.scoreSubtext {
+  font-size: 13px;
+  color: var(--color-muted);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.rankCard {
+  background: linear-gradient(135deg, #2563EB 0%, #1d4ed8 100%);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.25);
+}
+
+.rankLabel {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rankValue {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.prizeBox {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 12px;
+}
+
+.prizeLabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prizeValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.prizeHint {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.noRankCard {
+  background: var(--color-gray-100);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.noRankText {
+  font-size: 14px;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.percentileMsg {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.rankMovementCard {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+}
+
+.rankMovementText {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.pointsAwayText {
+  font-size: 14px;
+  color: #f59e0b;
+  font-weight: 600;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.status {
+  margin: 12px 0;
+  min-height: 24px;
+}
+
+.status p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.success {
+  color: #10b981;
+}
+
+.error {
+  color: #ef4444;
+}
+
+.leaderboardBtn {
+  width: 100%;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 52px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+  transition: all 0.2s;
+  letter-spacing: -0.2px;
+}
+
+.leaderboardBtn:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.homeBtn {
+  width: 100%;
+  padding: 16px;
+  background: var(--color-brand);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 52px;
+  margin-top: 4px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  letter-spacing: -0.2px;
+}
+
+.homeBtn:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.retryBtn {
+  margin-top: 12px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.retryBtn:active {
+  transform: scale(0.98);
+}
+
+.errorDetails {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin-top: 6px;
+}

@@ -1,0 +1,17 @@
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.verified {
+  background-color: #DCFCE7;
+  color: #15803D;
+}
+
+.unverified {
+  background-color: var(--color-gray-100);
+  color: var(--color-muted);
+}

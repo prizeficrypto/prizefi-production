@@ -1,0 +1,236 @@
+.main {
+  padding-top: calc(var(--space) * 0.5);
+  padding-bottom: 160px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: calc(var(--space) * 0.75);
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value {
+  font-weight: 500;
+}
+
+.languageOptions {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 0.5);
+}
+
+.languageBtn {
+  padding: calc(var(--space) * 0.75);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.languageBtn:hover {
+  border-color: var(--color-gray-300);
+  background-color: var(--color-gray-100);
+}
+
+.languageBtn.selected {
+  border-color: var(--color-brand);
+  background-color: var(--color-blue-50);
+  color: var(--color-brand);
+}
+
+.languageBtn:active {
+  transform: scale(0.98);
+}
+
+.themeToggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--space) * 0.75);
+}
+
+.themeBtn {
+  padding: calc(var(--space) * 0.75);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.themeBtn:hover {
+  border-color: var(--color-gray-300);
+  background-color: var(--color-gray-100);
+}
+
+.themeBtn.selected {
+  border-color: var(--color-brand);
+  background-color: var(--color-blue-50);
+  color: var(--color-brand);
+}
+
+.themeBtn:active {
+  transform: scale(0.98);
+}
+
+.toggleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.toggleLabel {
+  font-family: var(--font-retro), monospace;
+  font-size: 12px;
+  color: var(--color-text);
+}
+
+.toggleBtn {
+  position: relative;
+  width: 64px;
+  height: 32px;
+  border: 3px solid #1e3a5f;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.toggleOn {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+.toggleOff {
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+}
+
+.toggleKnob {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.toggleOn .toggleKnob {
+  transform: translateX(30px);
+}
+
+.toggleOff .toggleKnob {
+  transform: translateX(0);
+}
+
+.toggleText {
+  font-family: var(--font-retro), monospace;
+  font-size: 8px;
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+  margin-left: auto;
+  margin-right: 4px;
+}
+
+.toggleOn .toggleText {
+  margin-left: 4px;
+  margin-right: auto;
+}
+
+.usernameEditContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.usernameInput {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.usernameInput:focus {
+  outline: none;
+  border-color: var(--color-brand);
+}
+
+.usernameEditButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.saveBtn {
+  flex: 1;
+  padding: 12px;
+  background: var(--color-brand);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.saveBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancelBtn {
+  flex: 1;
+  padding: 12px;
+  background: var(--color-gray-200);
+  color: var(--color-text);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancelBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.usernameError {
+  color: #ef4444;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.usernameDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.usernameText {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.usernameHint {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}

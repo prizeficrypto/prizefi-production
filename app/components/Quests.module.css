@@ -1,0 +1,309 @@
+.container {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%);
+  border-bottom: 3px solid #000;
+  cursor: pointer;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-pixel);
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+.badge {
+  background: #ef4444;
+  color: white;
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  padding: 3px 8px;
+  border: 2px solid #000;
+}
+
+.expandIcon {
+  font-family: var(--font-pixel);
+  font-size: 18px;
+  color: #000;
+}
+
+.questList {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.questItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  gap: 12px;
+}
+
+.questItem.completed {
+  border-color: #3b82f6;
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.questItem.claimed {
+  opacity: 0.6;
+  border-color: #94a3b8;
+}
+
+.questInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.questTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.questTitle {
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  color: #1f2937;
+}
+
+.boostedBadge {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  background: linear-gradient(180deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  padding: 2px 6px;
+  border: 1px solid #000;
+  white-space: nowrap;
+}
+
+.questDesc {
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.boostedHint {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: #d97706;
+  margin-top: 4px;
+  font-weight: bold;
+}
+
+.progressBar {
+  height: 8px;
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+  transition: width 0.3s ease;
+}
+
+.questItem.completed .progressFill {
+  background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.progressText {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: #64748b;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.questAction {
+  flex-shrink: 0;
+}
+
+.claimBtn {
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: 2px solid #000;
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #000;
+  transition: all 0.1s;
+}
+
+.claimBtn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+.claimBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.claimedBadge {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: #94a3b8;
+  background: #f1f5f9;
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+}
+
+.inProgress {
+  font-family: var(--font-pixel);
+  font-size: 9px;
+  color: #64748b;
+}
+
+.showMore {
+  width: 100%;
+  padding: 12px;
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  color: #3b82f6;
+  background: transparent;
+  border: none;
+  border-top: 2px solid #e2e8f0;
+  cursor: pointer;
+}
+
+.showMore:hover {
+  background: #f8fafc;
+}
+
+.loadingText {
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  color: #94a3b8;
+  text-align: center;
+  padding: 20px 12px;
+}
+
+.emptyText {
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  color: #94a3b8;
+  text-align: center;
+  padding: 20px 12px;
+}
+
+.claimError {
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  color: #ef4444;
+  text-align: center;
+  padding: 8px 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  margin: 4px 8px;
+}
+
+.preSpinOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.preSpinModal {
+  background: white;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0 #000;
+  max-width: 300px;
+  width: 100%;
+  padding: 24px;
+  text-align: center;
+}
+
+.preSpinIcon {
+  margin-bottom: 16px;
+}
+
+.preSpinTitle {
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  color: #1f2937;
+  margin: 0 0 12px;
+}
+
+.preSpinText {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+.preSpinButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.preSpinBtn {
+  font-family: var(--font-pixel);
+  font-size: 14px;
+  background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: 3px solid #000;
+  padding: 14px 32px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #000;
+  transition: all 0.1s;
+}
+
+.preSpinBtn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+.preSpinCancel {
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  background: transparent;
+  color: #64748b;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.preSpinCancel:hover {
+  color: #1f2937;
+}

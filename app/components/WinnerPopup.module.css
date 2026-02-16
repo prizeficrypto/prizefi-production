@@ -1,0 +1,220 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.overlay.fadeOut {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+.popup {
+  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+  border: 3px solid #F59E0B;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  animation: slideIn 0.4s ease-out;
+  box-shadow: 0 0 40px rgba(245, 158, 11, 0.3);
+}
+
+.popup.slideOut {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+.confetti {
+  font-size: 32px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.confetti span {
+  animation: bounce 0.6s ease-in-out infinite alternate;
+}
+
+.confetti span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.confetti span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.title {
+  font-size: 20px;
+  color: #F59E0B;
+  margin: 0 0 4px 0;
+  text-shadow: 0 2px 8px rgba(245, 158, 11, 0.5);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 0 0 20px 0;
+}
+
+.prizeCard {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rankBadge, .prizeAmount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rankLabel, .prizeLabel {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.rankValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.prizeValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.infoBox {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.infoText {
+  font-size: 13px;
+  color: #86efac;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.infoText strong {
+  color: #22c55e;
+}
+
+.discordSection {
+  margin-bottom: 16px;
+}
+
+.discordText {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 0 0 10px 0;
+}
+
+.discordButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #5865F2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.discordButton:hover {
+  background: #4752C4;
+  transform: translateY(-1px);
+}
+
+.discordButton:active {
+  transform: translateY(0);
+}
+
+.discordIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.closeButton {
+  background: transparent;
+  border: 2px solid #64748b;
+  color: #94a3b8;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.closeButton:hover {
+  border-color: #94a3b8;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}

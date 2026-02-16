@@ -1,0 +1,46 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(var(--space) * 0.75) 0;
+  margin-bottom: calc(var(--space) * 1.5);
+}
+
+.left,
+.right {
+  flex: 1;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+}
+
+.backBtn,
+.settingsBtn {
+  background: none;
+  border: none;
+  color: var(--color-brand);
+  font-size: 16px;
+  font-weight: 500;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.backBtn:hover,
+.settingsBtn:hover {
+  background-color: var(--color-gray-100);
+}
+
+.backBtn:active,
+.settingsBtn:active {
+  background-color: var(--color-gray-200);
+}
